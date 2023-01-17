@@ -1,0 +1,19 @@
+
+
+.brand-logo {
+    height: 40px;
+}
+
+.sidebar {
+    padding: 0 !important;
+    border-bottom-right-radius: 10px;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.btn-group-vertical {
+    padding: 0 !important;
+    width: 100%;
+}

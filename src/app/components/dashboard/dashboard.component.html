@@ -1,27 +1,33 @@
 <!-- Top navigation -->
-<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+<nav class="navbar navbar-dark bg-dark flex-md-nowrap p-0">
     <a class="navbar-brand col-sm-3 col-md-2 mr-0">
-        <img class="brand-logo" src="assets/logo-positronx-white.svg" alt="positronX.io Logo">
+        <img class="brand-logo" src="../../../assets/images/vector.png" alt="Vector Logo">
     </a>
 </nav>
 <!-- Sidebar navigation -->
 <div class="container-fluid">
     <div class="row">
-        <nav class="col-md-2 d-md-block bg-light sidebar">
-            <div class="sidebar-sticky">
-                <ul class="nav flex-column">
+        <nav class="col-md-2 d-md-block bg-dark sidebar">
+            <div class="sidebar">
+                <!-- <ul class="nav flex-column">
                     <li class="nav-item">
                         <a class="nav-link active">
-                            <i class="fas fa-user"></i>User Profile
+                            <i class="fas"></i>User Profile
                         </a>
-                    </li>
-                    <!-- Calling SignOut() Api from AuthService -->
-                    <li class="nav-item">
+                    </li> -->
+                <!-- Calling SignOut() Api from AuthService -->
+                <!-- <li class="nav-item">
                         <a class="nav-link" (click)="authService.SignOut()">
                             <i class="fas fa-sign-out-alt"></i>Log out
                         </a>
                     </li>
-                </ul>
+                </ul> -->
+                <div class="btn-group-vertical">
+                    <button type="button" class="btn btn-secondary btn-lg btn-block active"><span><i
+                                class="fa fa-user"></i></span> User Profile</button>
+                    <button type="button" class="btn btn-secondary btn-lg btn-block" (click)="authService.SignOut()"><span><i
+                                class="fa fa-sign-out"></i></span>Log out</button>
+                </div>
             </div>
         </nav>
         <!-- Main content -->
