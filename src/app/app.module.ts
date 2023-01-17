@@ -15,6 +15,10 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+import { AuthService } from './shared/services/auth.service';
+
+import {MatButtonModule} from '@angular/material/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -33,8 +37,10 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireDatabaseModule,
+    MatButtonModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
