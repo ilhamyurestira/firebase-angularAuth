@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -19,6 +20,12 @@ import { AuthService } from './shared/services/auth.service';
 
 import {MatButtonModule} from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { AddStudentComponent } from './student/add-student/add-student.component';
+import { EditStudentComponent } from './student/edit-student/edit-student.component';
+import { StudentListComponent } from './student/student-list/student-list.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -27,7 +34,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SignInComponent,
     SignUpComponent,
     ForgotPasswordComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
+    AddStudentComponent,
+    EditStudentComponent,
+    StudentListComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +48,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AngularFireStorageModule,
     AngularFireDatabaseModule,
     MatButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(), // ToastrModule added
+    ReactiveFormsModule,
+    NgxPaginationModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
