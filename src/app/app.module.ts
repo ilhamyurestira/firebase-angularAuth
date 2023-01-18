@@ -26,6 +26,7 @@ import { EditStudentComponent } from './student/edit-student/edit-student.compon
 import { StudentListComponent } from './student/student-list/student-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { LayoutComponent } from './components/layout/layout.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     VerifyEmailComponent,
     AddStudentComponent,
     EditStudentComponent,
-    StudentListComponent
+    StudentListComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,

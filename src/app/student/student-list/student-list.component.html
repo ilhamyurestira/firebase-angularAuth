@@ -1,46 +1,49 @@
-<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h2 class="h2">Students List</h2>
-    <a routerLink="/register-student" class="btn btn-success" *ngIf="hideWhenNoStudent">
-        Add Student
-    </a>
-</div>
-<div class="pricing-header mx-auto">
-    <div class="no-data text-center" *ngIf="preLoader">
-        <img src="assets/preloader.gif" class="preloader-icon" alt="No student" />
+<body>
+    <div
+        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h2 class="h2">Students List</h2>
+        <a routerLink="/register-student" class="btn btn-success" *ngIf="hideWhenNoStudent">
+            Add Student
+        </a>
     </div>
-    <div class="no-data text-center" *ngIf="noData">
-        <img src="assets/no-student.svg" class="nodata-msg" alt="No student" />
-        <p class="nodata-msg">No student added yet!</p>
-        <a routerLink="/register-student" class="btn btn-success"> Add Student </a>
-    </div>
-    <div class="table-responsive" *ngIf="hideWhenNoStudent">
-        <table class="table table-bordered table-responsive-sm table-responsive-md table-responsive-lg">
-            <thead>
-                <tr>
-                    <th scope="col">Student Id</th>
-                    <th scope="col">Student name</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Mobile number</th>
-                    <th class="text-center" scope="col">Edit</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="
+    <div class="pricing-header mx-auto">
+        <div class="no-data text-center" *ngIf="preLoader">
+            <img src="assets/preloader.gif" class="preloader-icon" alt="No student" />
+        </div>
+        <div class="no-data text-center" *ngIf="noData">
+            <img src="assets/no-student.svg" class="nodata-msg" alt="No student" />
+            <p class="nodata-msg">No student added yet!</p>
+            <a routerLink="/register-student" class="btn btn-success"> Add Student </a>
+        </div>
+        <div class="table-responsive" *ngIf="hideWhenNoStudent">
+            <table class="table table-bordered table-responsive-sm table-responsive-md table-responsive-lg">
+                <thead>
+                    <tr>
+                        <th scope="col">Student Id</th>
+                        <th scope="col">Student name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Mobile number</th>
+                        <th class="text-center" scope="col">Edit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="
             let student of Student
-            | paginate: { itemsPerPage: 8, currentPage: p };
+            | paginate: { itemsPerPage: 5, currentPage: p };
             let i = index">
-                    <th scope="row">{{ student.$key }}</th>
-                    <td>{{ student.firstName }} {{ student.lastName }}</td>
-                    <td>{{ student.email }}</td>
-                    <td>{{ student.mobileNumber }}</td>
-                    <td class="text-center action-block">
-                        <span class="mr-2 btn btn-outline-primary btn-sm"
-                            routerLink="/edit-student/{{ student.$key }}">Edit</span>
-                        <span class="btn btn-outline-danger btn-sm" (click)="deleteStudent(student)">Delete</span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                        <th scope="row">{{ student.$key }}</th>
+                        <td>{{ student.firstName }} {{ student.lastName }}</td>
+                        <td>{{ student.email }}</td>
+                        <td>{{ student.mobileNumber }}</td>
+                        <td class="text-center action-block">
+                            <span class="mr-2 btn btn-outline-primary btn-sm"
+                                routerLink="/edit-student/{{ student.$key }}">Edit</span>
+                            <span class="btn btn-outline-danger btn-sm" (click)="deleteStudent(student)">Delete</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
     </div>
-    <pagination-controls (pageChange)="p = $event"></pagination-controls>
-</div>
+</body>
