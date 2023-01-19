@@ -35,9 +35,10 @@
                         <td>{{ student.email }}</td>
                         <td>{{ student.mobileNumber }}</td>
                         <td class="text-center action-block">
-                            <span class="mr-2 btn btn-outline-primary btn-sm"
-                                routerLink="/edit-student/{{ student.$key }}">Edit</span>
-                            <span class="btn btn-outline-danger btn-sm" (click)="deleteStudent(student)">Delete</span>
+                            <span class="mr-2 btn btn-outline-primary btn-sm" title="Edit" aria-label="Edit"
+                                routerLink="/edit-student/{{ student.$key }}"><i class="uil uil-edit"></i></span>
+                            <span class="btn btn-outline-danger btn-sm" title="Delete" aria-label="Delete"
+                                (click)="deleteStudent(student)"><i class="uil uil-trash-alt"></i></span>
                         </td>
                     </tr>
                 </tbody>
