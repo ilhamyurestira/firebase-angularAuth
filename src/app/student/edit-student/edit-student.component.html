@@ -17,7 +17,7 @@
                     <div class="row">
                         <div class="col-lg-5 col-md-12 col-sm-12">
                             <div class="row">
-                                <div class="col-md-12 mb-3">
+                                <div class="col-md-6 mb-3">
                                     <label>First name</label>
                                     <input type="text" formControlName="firstName" class="form-control" required />
                                     <p *ngIf="firstName?.touched && firstName?.invalid" class="error">
@@ -27,7 +27,7 @@
                                         <sup>*</sup>Name shouldn't be less than 2 words
                                     </p>
                                 </div>
-                                <div class="col-md-12 mb-3">
+                                <div class="col-md-6 mb-3">
                                     <label>Last name</label>
                                     <input type="text" formControlName="lastName" class="form-control" />
                                 </div>

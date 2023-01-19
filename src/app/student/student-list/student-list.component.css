@@ -1,6 +1,4 @@
 body {
-    margin-left: 50px;
-    margin-right: 50px;
     background-color: transparent;
 }
 
@@ -19,7 +17,8 @@ body pagination-controls {
     left: 0;
     z-index: 100;
     /* Behind the navbar */
-    padding: 48px 0 0;
+    padding-left: 50px;
+    padding-right: 50px;
     /* Height of navbar */
 }
 

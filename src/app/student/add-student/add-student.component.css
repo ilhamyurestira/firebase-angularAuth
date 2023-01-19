@@ -1,6 +1,4 @@
 body {
-    margin-left: 50px;
-    margin-right: 50px;
     background-color: transparent;
 }
 
@@ -11,7 +9,8 @@ body {
     left: 0;
     z-index: 100;
     /* Behind the navbar */
-    padding: 48px 0 0;
+    padding-left: 50px;
+    padding-right: 50px;
     /* Height of navbar */
 }
 
@@ -27,6 +26,7 @@ body {
 
 .error {
     color: red;
+    font-size: 14px;
 }
 
 input.ng-invalid.ng-touched {
