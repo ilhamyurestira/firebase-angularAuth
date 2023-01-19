@@ -1,4 +1,77 @@
 body {
     margin-left: 50px;
     margin-right: 50px;
+    background-color: transparent;
+}
+
+body pagination-controls {
+    padding: 0;
+    margin: 8px 0 0;
+    float: left;
+    width: 100%;
+    text-align: right;
+}
+
+.body {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    /* Behind the navbar */
+    padding: 48px 0 0;
+    /* Height of navbar */
+}
+
+.body-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* Scrollable contents if viewport is shorter than content. */
+}
+
+b,
+strong {
+    font-weight: bolder;
+    width: 100%;
+}
+
+.btn-custom {
+    background-color: #db6618;
+    color: white;
+}
+
+.btn-custom:hover {
+    background-color: #db4437;
+    color: white;
+}
+
+table.table-bordered {
+    border: 1px solid #db4437;
+    margin-top: 20px;
+}
+
+table.table-bordered>thead>tr>th {
+    border: 1px solid #db4437;
+    background-color: #db6618;
+    color: #231f1f;
+}
+
+table.table-bordered>thead>tr>td {
+    border: 1px solid #db4437;
+}
+
+table.table-bordered>tbody>tr>th {
+    border: 1px solid #db4437;
+}
+
+table.table-bordered>tbody>tr>td {
+    border: 1px solid #db4437;
+}
+
+div.border-bottom {
+    border-bottom: 1px solid #db4437!important;
 }

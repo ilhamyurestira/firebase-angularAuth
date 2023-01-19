@@ -20,3 +20,22 @@ body {
     text-align: left;
     background-color: #fff;
 }
+
+.img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.ngx-pagination .current {
+    padding: 0.1875rem 0.625rem;
+    background: #db4437 !important;
+    color: #fefefe;
+    cursor: default;
+}
+
+.ngx-pagination{
+    padding: 0.1875rem 0.625rem;
+    color: #db4437 !important;
+    cursor: default;
+}

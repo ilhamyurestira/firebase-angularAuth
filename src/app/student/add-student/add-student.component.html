@@ -1,4 +1,4 @@
-<body>
+<body class="body body-sticky">
     <div class="pt-3 pb-2 mb-3 border-bottom">
         <h2 class="h2">Add Student</h2>
     </div>
@@ -50,7 +50,7 @@
                     <button type="button" class="btn btn-secondary gap-right" (click)="ResetForm()">
                         Reset
                     </button>&nbsp;
-                    <button type="submit" class="btn btn-success" [disabled]="!studentForm.valid">
+                    <button type="submit" class="btn btn-custom" [disabled]="!studentForm.valid">
                         Add Student
                     </button>
                 </div>

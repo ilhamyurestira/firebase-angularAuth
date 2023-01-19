@@ -126,3 +126,34 @@ body {
     border-color: transparent;
     box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
 }
+
+.btn-outline {
+    width: 100%;
+    border-radius: 0;
+    margin-top: 1px;
+    border: 0 ;
+    background-color: #DB4437;
+    color: #231f1f; 
+    text-align: left;
+    padding-left: 20px;
+}
+
+.btn-outline:hover {
+    background-color: #DB6618;
+    color: white; 
+}
+
+.btn-outline.active {
+    background-color: #DB6618;
+    color: white; 
+}
+
+.btn-outline.focus {
+    background-color: #DB4437;
+    color: white; 
+    box-shadow: white;
+}
+
+.bg-custom {
+    background-color: #DB4437;
+}

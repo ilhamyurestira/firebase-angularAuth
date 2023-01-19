@@ -1,19 +1,21 @@
-<body>
+<body class="body body-sticky">
     <div
         class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h2 class="h2">Students List</h2>
-        <a routerLink="/register-student" class="btn btn-success" *ngIf="hideWhenNoStudent">
+        <a routerLink="/register-student" class="btn btn-custom" *ngIf="hideWhenNoStudent">
             Add Student
         </a>
     </div>
     <div class="pricing-header mx-auto">
-        <div class="no-data text-center" *ngIf="preLoader">
-            <img src="assets/preloader.gif" class="preloader-icon" alt="No student" />
-        </div>
-        <div class="no-data text-center" *ngIf="noData">
-            <img src="assets/no-student.svg" class="nodata-msg" alt="No student" />
-            <p class="nodata-msg">No student added yet!</p>
-            <a routerLink="/register-student" class="btn btn-success"> Add Student </a>
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status" *ngIf="preLoader">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="no-data text-center" *ngIf="noData">
+                <img src="assets/no-student.svg" class="nodata-msg" alt="No student" />
+                <p class="nodata-msg">No student added yet!</p>
+                <a routerLink="/register-student" class="btn btn-success"> Add Student </a>
+            </div>
         </div>
         <div class="table-responsive" *ngIf="hideWhenNoStudent">
             <table class="table table-bordered table-responsive-sm table-responsive-md table-responsive-lg">
@@ -27,10 +29,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="
-            let student of Student
-            | paginate: { itemsPerPage: 5, currentPage: p };
-            let i = index">
+                    <tr *ngFor="let student of Student | paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
                         <th scope="row">{{ student.$key }}</th>
                         <td>{{ student.firstName }} {{ student.lastName }}</td>
                         <td>{{ student.email }}</td>
@@ -44,6 +43,9 @@
                 </tbody>
             </table>
         </div>
-        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        <div class="d-flex" *ngIf="hideWhenNoStudent">
+            <strong>Student List <span>({{Student.length}} data)</span></strong>
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
     </div>
 </body>
