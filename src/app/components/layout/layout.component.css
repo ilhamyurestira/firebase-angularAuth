@@ -131,29 +131,77 @@ body {
     width: 100%;
     border-radius: 0;
     margin-top: 1px;
-    border: 0 ;
+    border: 0;
     background-color: #DB4437;
-    color: #231f1f; 
+    color: #231f1f;
     text-align: left;
     padding-left: 20px;
 }
 
 .btn-outline:hover {
     background-color: #DB6618;
-    color: white; 
+    color: white;
 }
 
 .btn-outline.active {
     background-color: #DB6618;
-    color: white; 
+    color: white;
 }
 
 .btn-outline.focus {
     background-color: #DB4437;
-    color: white; 
+    color: white;
     box-shadow: white;
 }
 
 .bg-custom {
     background-color: #DB4437;
 }
+
+.dropdown-toggle {
+    outline: 0;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    /* display: none; */
+    float: left;
+    width: 100%;
+    /* min-width: 10rem; */
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    font-size: 1rem;
+    color: #fff;
+    text-align: left;
+    list-style: none;
+    background-color: #343a40;
+    background-clip: padding-box;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: .25rem;
+}
+
+.dropdown-item {
+    color: #fff;
+}
+
+.dropdown-item:hover {
+    background-color: #DB6618;
+}
+
+b, strong:hover {
+    color: #DB6618;
+}
+
+/* .main {
+    display: flex;
+    flex-wrap: wrap;
+  } */
+
+  .main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 100px);
+  }

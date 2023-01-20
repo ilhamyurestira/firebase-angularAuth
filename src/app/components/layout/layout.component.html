@@ -7,10 +7,25 @@
         data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <ul class="navbar-nav px-3">
-        <li class="nav-item text-nowrap">
-            <a class="nav-link" routerLink="" routerLinkActive="active" (click)="authService.SignOut()">Sign out</a>
-        </li>
+    <ul class="navbar-nav px-3" *ngIf="authService.userData as user">
+        <div class="dropdown">
+            <a href="" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                data-toggle="dropdown" aria-expanded="false">
+                <img src="{{(user.photoURL) ? user.photoURL : '/assets/dummy-user.png'}}" alt="{{user.displayName}}"
+                    width="32" height="32" class="rounded-circle me-2">&nbsp;
+                <strong>{{(user.displayName) ? user.displayName : 'User'}}</strong>
+            </a>
+            <ul class="dropdown-menu text-small shadow">
+                <!-- <li><a class="dropdown-item">New project...</a></li>
+                <li><a class="dropdown-item">Settings</a></li>
+                <li><a class="dropdown-item">Profile</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li> -->
+                <li><a class="dropdown-item" routerLink="" (click)="authService.SignOut()"><i
+                            class="uil uil-signout"></i> Sign out</a></li>
+            </ul>
+        </div>
     </ul>
 </nav>
 <!-- Sidebar navigation -->
